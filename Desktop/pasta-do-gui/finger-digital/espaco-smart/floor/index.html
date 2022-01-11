@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Espaço Smart Front Teste </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="../../public/css/main-layout.css" rel="stylesheet">
+    <link href="../../public/css/material.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="http-loading">
+        <div class="animated-wrapper http-loading">
+            <img src="../../public/img/circle.svg" alt="" class="animated-img">
+            <img src="../../public/img/loader-image.png" class="animated-other">
+        </div>
+    </div>
+    <section class="container-fluid mb-5"> 
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <img src="../../public/img/logo.png" class="logo">
+                <!-- <button class="btn button-identity home" type="button" id="" onclick=redirect()> Início <i class="bi bi-house-fill"></i> </button> -->
+            </div>
+        </div>
+        <h1 class="display-6 mb-5 text-center"> 1° Passo, escolha o tipo de piso </h1>
+        <div class="row justify-content-center text-center align-items-center align-middle">
+            <a class="col-lg-5 col-sm-10 m-2 text-identity" href="#floor">
+                <div class="card shadow-lg hover-identity" id="floor-card-residencial">
+                    <div class="card-body mt-5 mb-5" id="floor-div-usage-residencial">
+                        <i class="bi bi-house-door display-1"></i>
+                        <div>
+                            <label class="display-6 mt-4"> Residencial </label>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="col-lg-5 col-sm-10 m-2 text-identity" href="#floor">
+                <div class="card shadow-lg hover-identity" id="floor-card-comercial">
+                    <div class="card-body mt-5 mb-5" id="floor-div-usage-comercial">
+                        <i class="bi bi-shop-window display-1"></i>
+                        <div>
+                            <label class="display-6 mt-4"> Comercial </label>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+    </section>
+    <section class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <h1 class="display-6" id="floor"> 2° Passo, escolha o piso </h1>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <select class="form-control mt-2" id="floor-carpet-query">
+                            <option value="is_carpet=false"> Piso </option>
+                            <option value="is_carpet=true"> Carpete </option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                <div class="row justify-content-center" id="floor-div-list">
+                <!-- Cards will be inserted here -->
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-12 text-center">
+                <ul class="pagination" id="floor-pagination">
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <h4 class="display-6 mt-4" id="calc"> 3° Passo, coloque as metragens </h4>
+            <hr>
+            <div class="col-lg-6 col-sm-12">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h3 class="text-identity"> <i class="bi bi-rulers"></i> Metragem </h3>
+                        <hr>
+                        <div class="mb-2 text-dark">
+                            <label class="mb-1"> 
+                                <i tabindex="0" class="h5 bi bi-question-circle-fill text-identity me-1" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Sobre a metragem" data-bs-content="Área do local a ser aplicado o piso vinílico."></i>
+                                <strong> Metragem Real Pisos </strong> 
+                            </label>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" placeholder="Digite a metragem" aria-describedby="basic-addon2" id="calculator-form-metragem-pisos">
+                                <span class="input-group-text" id="basic-addon2">m<sup>2</sup></span>
+                            </div>    
+                            
+                            <label class="mb-2 mt-2"> 
+                                <i tabindex="0" class="h5 bi bi-question-circle-fill text-identity me-1" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Sobre a regularização" data-bs-content="Altura da Regularização, para deixar plana a superfície para instalação do piso."></i>
+                                <strong> Espessura Regularização </strong>
+                             </label>
+                            <div class="input-group mb-3">
+                                <select class="form-control" id="calculator-form-espessura-regularizacao">
+                                    <option value="3"> 3 (Leve reparação) recomendado </option>
+                                    <option value="5"> 5 (Média reparação) </option>
+                                    <option value="10"> 10 (Alta reparação) </option>
+                                </select>
+                                <span class="input-group-text" id="basic-addon2">mm</span>
+                            </div> 
+
+                            <label class="mb-2 mt-2"> 
+                                <i tabindex="0" class="h5 bi bi-question-circle-fill text-identity me-1" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Sobre a metragem" data-bs-content="Medida do comprimento do local a ser aplicado o rodapé"></i>
+                                <strong> Metragem Linear Rodapé  </strong> 
+                            </label>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" placeholder="Digite a metragem" aria-describedby="basic-addon2" id="calculator-form-metragem-rodape">
+                                <span class="input-group-text" id="basic-addon2">ml</span>
+                            </div> 
+
+                            <label class="fw-strong mt-2 mb-2"> 
+                                <i tabindex="0" class="h5 bi bi-question-circle-fill text-identity me-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+                                <strong> Escolha a Base </strong>
+                             </label>
+                            <select class="form-control mb-3" id="floor-base-select">
+                                <option value="4"> Contrapiso </option>
+                                <option value="5"> Cerâmico </option>
+                            </select>
+
+                            <div class="form-check form-switch form-control-lg mt-2">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault"> Área Térrea </label>
+                            </div>
+                            <p class="text-muted form-text">
+                                Para áreas térreas, a SMART recomenda utilizar uma barreira de vapor de umidade
+                            </p>
+                            <a href="#material" class="btn button-identity w-100" id="calculator-button-submit"> Calcular </a>
+                            <div id="area-div-pdf" hidden>
+                                <a class="btn button-identity w-100 mt-2" id="calculator-button-pdf"> Baixar PDF <i class="bi bi-file-earmark-pdf"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div>
+                    <label class="fw-light fs-3 mt-2"> Piso: </label>
+                    <div>
+                        <label class="text-muted" id="floor-label-description"> Não definido </label>
+                    </div>
+
+                    <label class="fw-light fs-3 mt-4"> Cola: </label>
+                    <div>
+                        <label class="text-muted" id="floor-label-bond"> Não definido </label>
+                    </div>
+
+                    <label class="fw-light fs-3 mt-4"> Preparação: </label>
+                    <div>
+                        <label class="text-muted" id="floor-label-preparation"> Digite a metragem </label>
+                        <div class="form-text">
+                            <ul>
+                                <li> Espatulada: Recomenda-se para áreas de até 20m<sup>2</sup>. onde utiliza-se a argamassa regularizador, aplicada de maneira espatulada </li> <br>
+                                <li> Autonivelante: Recomenda-se para áreas maiores que 20m<sup>2</sup>, onde utiliza-se um primer para melhor aderência na superficie, e em seguida a argamasse autonivelante liquida aplicada com um rodo nivelador </li>
+                            </ul>
+                        </div>
+                    </div>
+                <div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row mt-5">
+            <div class="col-12 text-center mt-5">
+                <h1 class="display-5 mt-5"> Materiais </h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="area-material-div" #area-material-div>
+            <!-- Cards will be insert here -->
+        </div>
+        <div id="material" class="mb-4 row justify-content-center">
+            <div class="col-12 text-center">
+                <a class="fw-strong h6 text-identity" href="#"  data-bs-toggle="modal" data-bs-target="#modal-contacts"> Clique aqui para baixar </a>
+            </div>  
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+    <section>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-identity" id="staticBackdropLabel"> Tipos de Bases </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row mt-3">
+                    <div class="col-12">
+                        <label class="fw-bold"> Cerâmico: </label>
+                        <div>
+                            <img src="../../public/img/base/Cerâmica.jpg" class="mt-4 img-fluid img-thumbnail" width="300">  
+                            <img src="../../public/img/base/Ceramica 2.jpg" class="mt-4 img-fluid img-thumbnail" width="300"> 
+                            <img src="../../public/img/base/Ceramica 3.jpg" class="mt-4 img-fluid img-thumbnail" width="300"> 
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <label class="fw-bold"> Contrapiso: </label>
+                        <div>
+                            <img src="../../public/img/base/Contrapiso.jpg" class="mt-4 img-fluid img-thumbnail" width="300" style="min-height: 13rem;">  
+                            <img src="../../public/img/base/Contrapiso 2.jpg" class="mt-4 img-fluid img-thumbnail" width="300" height="200" style="min-height: 13rem;"> 
+                            <img src="../../public/img/base/Contrapiso 3.png" class="mt-4 img-fluid img-thumbnail" width="300" height="200" style="min-height: 13rem;">  
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modal-contacts" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-identity" id="staticBackdropLabel"> <i class="bi bi-person-lines-fill"></i> Seu Contato </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="../../public/img/logo.png" class="img-fluid" style="max-height: 8rem;">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="form-text">
+                            Digite suas informações para a Espaço Smart entrar em contato, após o envio das informações seu PDF estará disponível para download
+                            <hr>
+                        </p>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail"> <i class="bi bi-envelope"></i> Email </label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="" id="floatingName" placeholder="Digite seu nome">
+                        <label for="floatingName"> <i class="bi bi-person"></i> Nome </label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="" id="floatingTel" placeholder="Digite seu nome">
+                        <label for="floatingTel"> <i class="bi bi-telephone"></i> Telefone </label>
+                    </div>
+                    <div class="form-check form-switch form-control-lg mb-3 justify-content-end">
+                        <input class="form-check-input" type="checkbox" id="form-sw">
+                        <label class="form-check-label text-sm" for="form-sw"> Instalação </label>
+                    </div>
+                    <div class="text-end">
+                        <button class="button-identity btn w-100" id="calculator-send"> Enviar </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <script src="../../public/js/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://pagecdn.io/lib/mathjs/7.1.0/math.min.js"></script>
+
+    <script src="../../public/js/utils.js"></script>
+    
+    <script src="../_recycled/material.js"></script>
+    <script src="../_recycled/pagination.js"></script>
+
+    <script src="../../public/js/entity/BaseEntity.js"></script>
+    <script src="../../public/js/entity/Floor.js"></script>
+    <script src="../../public/js/entity/Especification.js"></script>
+    <script src="../../public/js/entity/Formula.js"></script>
+    <script src="../../public/js/entity/Contact.js"></script>
+
+    <script src="../../public/js/VisualModel.js"></script>
+    <script src="../../public/js/Framer.js"></script>
+
+    <script src="./../_recycled/contact.js"></script>
+    <script src="./../_recycled/loader.js"></script>
+    <script src="./visual/calculator.js"></script>
+    <script src="./visual/floor-pagination.js"></script>
+    <script src="./visual/floor.js"></script>
+    <script src="./visual/filter-carpert.js"></script>
+    <script src="./index.js"></script>
+
+
+
+    <!-- <script src="./scripts/calculator/calculator.js"></script> -->
+
+</body>
+</html>

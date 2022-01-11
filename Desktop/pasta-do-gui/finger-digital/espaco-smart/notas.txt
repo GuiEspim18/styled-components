@@ -1,0 +1,35 @@
+PERFIL FORRO TABICA BRANCA 0,5 X 3000MM Z275        
+MULTIFUNÇÃO F530
+Cantoneira 3000mm
+Travessas de 1250 mm
+PENDURAL PARA PERFIL T DE REBITAR
+Longarina de 3125 mm
+Forro Modular 1250 x 625 mm
+Forro Modular 625 x 625 mm
+
+
+onde os quantitativos entram nos calculos de aprede?  -- os quantitativos é só usada
+Há uma soma dos valores do quantitativo com o resultado dos calculos de parede? -- o quantitativo é só usada na parede externa
+Onde estão as fórmulas de calculo de parede externa ? -- vão mandar
+O valor do "3574" na pagina "Performa" tem o valor padrão 0, esse seria o padrão correto ? -- o produto não é usado
+O que é o linear + 5% localizado no arquivo de quantitativo na smart plus localizado na linha 
+L6 e L8 ? E porque eles dão resultados diferentes ? No mesmo arquivo na linha M5 tem um calculo, esse calculo é referente a o que ?  -- o 25% ele va8 checar e o 5% é calculado como calculo de perda
+E esse 25% na linha M4, seria a porcentagem de o que ?
+Na linha K3 tem um calculo, esse calculo é referente a o que ?
+O valor do "3574" na página "CF30 tem o valor padrão 0, esse seria o valor correto ? -- o produto não é usado
+Os valores dos quantitativos são para arredondas pra cima ? -- vai checar
+O que significa o M90 ? -- referencia
+
+Administrador Sistem
+admin@sistema.com
+123
+
+-----pdf-----
+(a, b, c, d)
+a = margem esquerda
+
+
+Podemos manter 2 projetos até que a versão do projeto que está organizada se iguale à que está bagunçada,
+fazendo assim a reestruturação do projeto fazendo ele de 
+
+
