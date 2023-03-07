@@ -1,0 +1,13 @@
+restaurante - 1 -15
+nutricionista - 16 - 240
+ingredientes - 256 - 3840
+usuários do sistema - 4096 - 32768
+usuário app - 65536 - 524288
+planos ver - 1048576 - 8388608
+
+restaurante - 3
+nutricionista -48
+ingredientes - 768
+usuários do sistema - 12288
+usuário app - 196608
+planos - 2097152
